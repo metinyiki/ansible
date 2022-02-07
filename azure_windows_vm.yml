@@ -1,3 +1,13 @@
+ ---
+- name: Create Azure VM
+  hosts: localhost
+  connection: local
+  tasks:
+
+  - name: Create resource group
+    azure_rm_resourcegroup:
+      name: myResourceGroup
+      location: eastus
  - name: Create virtual network
     azure_rm_virtualnetwork:
       resource_group: myResourceGroup
